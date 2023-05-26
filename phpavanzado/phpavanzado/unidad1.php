@@ -47,9 +47,9 @@ if(isset($_GET['ok'])) {
 	   <p>Numero de Clase: <?php echo $listar_clas['id_clase']; ?></p>
 	    <p>Unidad: <?php echo $listar_clas['unidad']; ?></p>
 		 <p>Fecha: <?php echo $listar_clas['fecha']; ?></p>
-		  <nav class="btn_agenda">
-            <ul>
-			  <li><a href="eliminar.php?clases=<?php echo $listar_clas['id_clase'];?>">Eliminar</a></li>	
+		  <nav id="btn_agenda2">
+            <ul class="uni1">
+			  <li class="uni2"><a class="btn" href="eliminar.php?clases=<?php echo $listar_clas['id_clase'];?>">Eliminar</a></li>	
 			</ul>
     	  </nav> 
      </div>	

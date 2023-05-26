@@ -73,11 +73,114 @@ nav ul li a {
   box-sizing: border-box;
   background-color: #afea24;
   font-size: 15px;
-  font-weight: bold; 
+  font-weight: bold;
+  text-align: center; 
+}
+#btn_agenda2 {
+  width: 150px;
+  height: 40px;
+  background: #f1281a;
+  -moz-border-radius:25%;-webkit-border-radius:25%;-o-border-radius:25%;border-radius:25%; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#btn_agenda2:hover {
+  background-color: #fff;     
+} 
+
+.btn {
+  color: #0f0b0b;
+  background-color: cadetblue;
+  -moz-border-radius:20%;-webkit-border-radius:20%;-o-border-radius:20%;border-radius:20%; 
+  margin-top: -50px;
+}
+                        /* UNIDAD 2 */   
+h6 {
+  color: #000;
+  background-color: #afea24;
+  text-align: center;
+  margin: 10px;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px; 
+}
+
+                        /* UNIDAD 3 */
+                          /* UL */
+#coment {
+  background-color: #b8f341;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
+}
+                          /* LI */
+.datos {
+  font-size: 15px;
+  color: #5e5c5c;
+  list-style: none;
+  margin: 1px;
+  padding: 5px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+/*.datos:hover {
+  color: #f1281a;
+} */                         
+ 
+                   /* TITULO COMENTARIOS */
+.comentarios {        
+  text-align: center;
+  color: #ec1e5c;
+}
+.container {
+  width: 70%;
+}
+.btn_3 {
+  background-color: #afea24;
+  color: #000;
+  border: 2px solid #4CAF50;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
+  margin-left: 170px;
+}
+.btn_3:hover {
+  background-color: #4CAF50;
+  color: #cccccc;
+}
+.casillero {
+  background-color: #dad7d7;
+}
+.casillero:hover {
+  background-color: #ffffff;
+}        
+.etiqueta {
+  color: #476403; 
+}            
+
+.form_3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  background-color: #ff0000; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#ff0000, #ffff00);
+  -moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;
+}
+
+.form_tres {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
+}
+
+.form_III {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
+}
+
+.form_tree {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
 }
 
 
-                        /*           */
+                      /*           */
 footer {
   position: fixed;
   width: 100%;
