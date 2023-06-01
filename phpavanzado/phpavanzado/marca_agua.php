@@ -1,9 +1,16 @@
 <?php
-$image = "imagenes/unidad4.jpg";
+$image = "imagenes/desierto.jpg";
 $marca_agua = "imagenes/marca.png";
 
-
+// Crea la imagen de marca de agua-*
 $img = imagecreatefrompng($marca_agua);
+
+
+// 2 Asegurarse de que la imagen de marca de agua tenga el tamaño correcto
+$img = imagescale($img, 200, 200);
+
+
+
 $ext = substr($image, -3);
 $ext = strtolower($ext);
 
@@ -21,14 +28,17 @@ switch ($ext) {
 }
 
   
-          //destino- fuente- eje x- eje y - whidt - heith-
-imagecopy($img2, $img, (imagesx($img2)/2), (imagesy($img2)/2), (imagesx($img)/2), (imagesy($img)/2), imagesx($img),  imagesy($img));   
-
+// Copia la imagen de la marca de agua en la imagen original-*
+// destino- fuente- eje x- eje y - ancho - alto-*          
+  
+imagecopy($img2, $img, (imagesx($img2)/2.9), (imagesy($img2)/3.9), 0, 0, imagesx($img), imagesy($img));
 
 
 header("Content-type: image/jpeg");
 imagejpeg($img2);
-// cierra
+
+// Liberar memoria
+
 imagedestroy($img);
 imagedestroy($img2);
 

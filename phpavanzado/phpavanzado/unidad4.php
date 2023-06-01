@@ -45,7 +45,7 @@
 			?>
 			<h3 class="unidad4">Marca de Agua</h3>
 			<div id="m_a">
-			<!--<img src="marca_agua.php" />-->
+			<img src="marca_agua.php" />
             </div> 
 			<h3 class="unidad4">Thumbnail</h3>
 			<?php
@@ -56,8 +56,17 @@
             <div id="m_a">
 			<img src="imagenes/instagram_thumb.jpg">
             </div>  
-           
-             <h3 class="unidad4">Imágenes Dinámicas</h3>
+			<?php
+			
+			include("thumbnail2.php");?>
+			<div id="m_a">
+			<img src="imagenes/unidad4.jpg">
+			</div> 
+            <div id="m_a">
+			<img src="imagenes/unidad4_thumb.jpg">
+            </div>  
+            
+			<h3 class="unidad4">Imágenes Dinámicas</h3>
 			 <div id="m_a">
 			 <img src="imagen_dinamica.php" />
 			 </div> 
