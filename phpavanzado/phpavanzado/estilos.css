@@ -199,7 +199,56 @@ h6 {
   padding: 10px;
 }
 
-                  /*                     */
+                  /*                 */
+                  /*    UNIDAD V     */
+                           /* CONSULTAS */
+#consultas {
+  margin-top: 1px;
+  padding: 3px;
+}
+
+                        /* TITULO FORMULARIO  */
+#unidad5 {
+  text-align: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 5px 15px 15px 5px #610404 inset;
+  text-shadow: 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000;
+  margin-top: -20px;
+}
+                         /* FORMULARIO */
+.unidadV {
+  text-align: center;
+  margin-top: -10px;
+}
+                         /*  CAPTCHA   */
+.caja5 {
+  display: inline-block;
+  margin: 10px;
+  
+}
+.u_5 {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.uni_5 {
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+.unida_5 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+                               /*  END  */
+
+
+                  /*                 */                    
 
 footer {
   position: fixed;
