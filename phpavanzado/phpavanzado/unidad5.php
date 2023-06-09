@@ -22,11 +22,11 @@
 			</nav>
 		</header>
 
-	                            	<!-- UNIDAD V -->
-
+		                          <!-- UNIDAD V -->
+ 
 		<section id="black">
 			<h2 id="consultas">Consultas</h2>
-			<h3 id="unidad5" >Formulario</h3>
+			<h3 id="unidad5">Formulario</h3>
 			<form class="unidadV" action="cargar.php" method="POST">
 				<label class="etiqueta" for="name">Nombre:</label>
 				<input type="text" id="name" name="name" required><br><br>
@@ -39,52 +39,50 @@
 
 				<label class="etiqueta" for="consulta">Consulta:</label>
 				<textarea id="consulta" name="consulta" required></textarea><br><br>
-			                 	
+
+
+				<h6>CAPTCHA</h6>
+				                <!--  ESTRUCTURA RANDOM -->
+
+
+				<?php
+				function contCaptcha()
+				{
+					$pattern = "123456789abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWY#&$%!'?";
+					$clave = "";
+					for ($i = 0; $i < 5; $i++) {
+						$clave .= $pattern[rand(0, 64)]; // .= el punto sirve para concatenar un valor*- 
+					}
+					return $clave;
+				}
+				$_SESSION['captcha'] = contCaptcha();
+				?>
+
+				<img class="u_5" src="captcha.php">
+
+				<div class="uni_5">
+					<input type="text" name="codigo" placeholder="Captcha">
+				</div>
+				<div class="unida_5">
+					<input class="btn_3 unida_5" type="submit" name="Enviar">
+				</div>
+
 			</form>
 
-			<h6>CAPTCHA</h6>      
-                                 <!--  ESTRUCTURA  -->
-			
-			
 			<?php
-			function contCaptcha() {
-				$pattern = "123456789abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWY#&$%!'?";
-				$clave = "";
-				for ($i = 0; $i < 5; $i++) {
-					$clave .= $pattern[rand(0,64)]; // .= el punto sirve para concatenar un valor*- 
-				}
-				return $clave;
+			if (isset($_GET['error_codigo'])) {
+				echo "<p>El código de seguridad es incorrecto</p>";
 			}
-			$_SESSION['captcha'] = contCaptcha();
 			?>
-          <!--        NEW        -->
-        <form class="caja5" method="POST" action="cargar.php">
-			  
-		  <img class="u_5" src="captcha.php">
-		  
-		  <div class="uni_5">
-		  <input type="text" name="codigo" placeholder="Captcha">
-		  </div>
-		  <div class="unida_5">
-		  <input class="btn_3 unida_5" type="submit" name="Enviar"> 
-		  </div> 
 
-		</form>
+	</div>
+	</section>
+	<aside>
 
-<?php
-if(isset($_GET['error_codigo'])) {
-	echo "<p>El código de seguridad es incorrecto</p>";
-}
-?>
-
-			</div>
-		</section>
-		<aside>
-
-		</aside>
-		<footer>
-			<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
-		</footer>
+	</aside>
+	<footer>
+		<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
+	</footer>
 
 	</div>
 </body>
