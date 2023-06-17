@@ -243,9 +243,51 @@ h6 {
 }
 
                                 /*  END  */
+                            /*   UNIDAD VI    */
+                            
+.unidad6 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #a7d25d;
+  font-size: 25px;
+  box-shadow: 5px 5px 6px #ea69ea, 8px 10px 6px #5c0404, 11px 15px 6px #07722a;
+  width: 150px;
+}                            
 
+.nombre {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 40px;
+  color: #ea69ea;
+}
+.apellido {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 40px;
+  color: #5c0404;
+}
+.edad {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 40px;
+  color: #07722a;
+}
+.edad6 {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 40px;
+  color: #07722a;
+}
+.u-6 {
+  text-decoration-line: underline;
+  text-decoration-style: double; 
+}
 
                            /*                 */                    
+
+
+
 
 footer {
   position: fixed;
