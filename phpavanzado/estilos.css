@@ -1,0 +1,392 @@
+.container {
+  width:1080px;
+  margin:0px auto;
+  font-size:1em;
+  font-family: "Arial", Georgia, Serif;
+  font-size: 15px;
+}
+header {
+  text-align:center;
+  border: 1px solid #666;
+  background: #cccccc;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+section,aside {
+  margin-top: 5px;
+  padding: 10px;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+section {
+  float: left;
+  width: 70%;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+aside {
+  float: right;
+  width: 25%;
+  background:#ccc;
+  color: #333;
+}
+nav {
+  padding:0.2%;
+  background:#f06156;
+  margin-top: 0.5%;
+}
+nav ul {
+  list-style-type:none;
+  padding:0px;
+  width: 100%;
+  display: table;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li:hover {
+  background-color: #ccc;
+  text-decoration: underline;
+}
+nav ul li a {
+ display:inline-block;
+ text-align:center;
+ text-decoration:none;
+ color: #75302a;
+ font-weight: bold;
+  padding:6px 15px;
+  margin:2px;
+  background:#fafafa;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+
+                        /*  UNIDAD I */
+
+.agenda {
+  width: 280px;
+  height: 140px;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #afea24;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center; 
+}
+#btn_agenda2 {
+  width: 150px;
+  height: 40px;
+  background: #f1281a;
+  -moz-border-radius:25%;-webkit-border-radius:25%;-o-border-radius:25%;border-radius:25%; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#btn_agenda2:hover {
+  background-color: #fff;     
+} 
+
+.btn {
+  color: #0f0b0b;
+  background-color: cadetblue;
+  -moz-border-radius:20%;-webkit-border-radius:20%;-o-border-radius:20%;border-radius:20%; 
+  margin-top: -50px;
+}
+                        /* UNIDAD 2 */   
+h6 {
+  color: #000;
+  background-color: #afea24;
+  text-align: center;
+  margin: 10px;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px; 
+}
+
+                        /* UNIDAD 3 */
+                          /* UL */
+#coment {
+  background-color: #b8f341;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
+}
+                          /* LI */
+.datos {
+  font-size: 15px;
+  color: #5e5c5c;
+  list-style: none;
+  margin: 1px;
+  padding: 5px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+                   /* TITULO COMENTARIOS */
+.comentarios {        
+  text-align: center;
+  color: #ec1e5c;
+}
+.container {
+  width: 70%;
+}
+.btn_3 {
+  background-color: #afea24;
+  color: #000;
+  border: 2px solid #4CAF50;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
+  margin-left: 170px;
+}
+.btn_3:hover {
+  background-color: #4CAF50;
+  color: #cccccc;
+}
+.casillero {
+  background-color: #dad7d7;
+}
+.casillero:hover {
+  background-color: #ffffff;
+}        
+.etiqueta {
+  color: #476403; 
+}            
+
+.form_3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  background-color: #ff0000; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#ff0000, #ffff00);
+  -moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;
+}
+
+.form_tres {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
+}
+
+.form_III {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
+}
+
+.form_tree {
+  background-color: #a87dec; /* Para navegadores que no admiten gradientes */
+  background-image: linear-gradient(#a87dec, #ffff00);
+  -moz-border-radius:8px;-webkit-border-radius:8px;-o-border-radius:8px;border-radius:8px;
+}
+
+ 
+                      /*            */
+                      /* UNIDAD IV  */  
+
+.unidad4 {
+  text-align: center;
+  font-size: 30px;
+  font-family:'Courier New', Courier, monospace; 
+  color: #006400;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-shadow: 1px 1px #FF0000;
+}
+
+.respuesta {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+#m_a {
+  text-align: center;
+  padding: 10px;
+}
+.img_u4 {
+  width: 360px;
+  object-fit: contain;
+}
+.agua {
+  width: 360px;
+  object-fit: contain;
+}
+.img_texto {
+  width: 360px;
+  object-fit: contain;
+}
+
+                  /*                 */
+                  /*    UNIDAD V     */
+                           /* CONSULTAS */
+#consultas {
+  margin-top: 1px;
+  padding: 3px;
+}
+
+                        /* TITULO FORMULARIO  */
+#unidad5 {
+  text-align: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 5px 15px 15px 5px #610404 inset;
+  text-shadow: 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000;
+  margin-top: -20px;
+}
+                         /* FORMULARIO */
+.unidadV {
+  text-align: center;
+  margin-top: -10px;
+}
+                         /*  CAPTCHA   */
+
+.u_5 {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  width: 80px;
+}
+
+.unidad_5_ {
+   text-align: center;
+}
+
+.uni_5 {
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+.unida_5 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.color_tit {
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  background-color: #afea24;
+  
+}
+
+                                /*  END  */
+                            /*   UNIDAD VI    */
+                            
+.unidad6 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #a7d25d;
+  font-size: 25px;
+  box-shadow: 5px 5px 6px #ea69ea, 8px 10px 6px #5c0404, 11px 15px 6px #07722a;
+  width: 150px;
+}                            
+
+.nombre {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 40px;
+  color: #ea69ea;
+}
+.apellido {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 40px;
+  color: #5c0404;
+}
+.edad {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 40px;
+  color: #07722a;
+}
+.edad6 {
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 40px;
+  color: #07722a;
+}
+.u-6 {
+  text-decoration-line: underline;
+  text-decoration-style: double; 
+}
+
+                           /*                 */                    
+                           /*   UNIDAD VII    */
+
+.u_7 {
+  margin-left: 180px;
+
+}
+
+
+footer {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0px 10px 0px;
+  background-color: #333;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+}
+
+h2 {
+  color: #f06156;
+}
+/* pantalla maximo 980px */
+@media screen and (max-width:980px) {
+  .container {
+    width:98%;
+  }
+  section {
+    width:68%;
+  }
+}
+ 
+/* pantalla maximo 700px */
+@media screen and (max-width:700px) {
+  aside,section {
+    float:none;
+    width:96%;
+    font-size:1.2em;
+  }
+  nav, section {
+    font-size:1.2em;
+  }
+  aside {
+    margin-top:5px;
+    background:#333;
+    color: #fff;
+  }
+  nav ul {
+    float:none;
+    clear:both;
+  }
+}
+ 
+ 
+/* pantalla maximo 480px */
+@media screen and (max-width:480px) {
+  aside {
+    display:block;
+    background:#333;
+    color: #fff;
+    font-size:1.5em;
+  }
+  nav, section {
+    font-size:1.5em;
+  }
+  section {
+    width:94%;
+  }
+  nav ul {
+    display: table;
+    text-align: center;
+    float: none;
+    width:100%;
+  }
+  nav ul li {
+    float:none;
+  }
+}
