@@ -3,7 +3,9 @@
 include("basededatos.php");
 include("producto.php");
 include("constantes.php");
+
 $base = new Basededatos(SERVIDOR, USUARIO, PASS, BASE);
+$prod = new Producto($base, $codigo, $producto, $descripcion, $precio); 
 
 // Definir las variables utilizando el método POST
 $codigo = $_POST['codigo'];
@@ -11,7 +13,7 @@ $producto = $_POST['producto'];
 $descripcion = $_POST['descripcion'];
 $precio = $_POST['precio'];
 
-$prod = new Producto($base, $codigo, $producto, $descripcion, $precio);  
+ 
 
 $prod->listar_productos($codigo, $producto, $descripcion, $precio);
 header("Location: unidad7.php?ok_prod#pdo");

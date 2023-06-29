@@ -198,6 +198,18 @@ h6 {
   text-align: center;
   padding: 10px;
 }
+.img_u4 {
+  width: 360px;
+  object-fit: contain;
+}
+.agua {
+  width: 360px;
+  object-fit: contain;
+}
+.img_texto {
+  width: 360px;
+  object-fit: contain;
+}
 
                   /*                 */
                   /*    UNIDAD V     */
@@ -232,6 +244,10 @@ h6 {
   width: 80px;
 }
 
+.unidad_5_ {
+   text-align: center;
+}
+
 .uni_5 {
   display: inline-block;
   margin-bottom: 50px;
@@ -240,6 +256,14 @@ h6 {
 .unida_5 {
   display: inline-block;
   margin-left: 10px;
+}
+
+.color_tit {
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  background-color: #afea24;
+  
 }
 
                                 /*  END  */
@@ -285,8 +309,12 @@ h6 {
 }
 
                            /*                 */                    
+                           /*   UNIDAD VII    */
 
+.u_7 {
+  margin-left: 180px;
 
+}
 
 
 footer {

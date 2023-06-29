@@ -1,5 +1,5 @@
 <?php
-include("producto.php");
+//include("producto.php");
 
 class Carrito {
     private $compras = array();
@@ -10,7 +10,8 @@ public function __construct($base) {   //constructor-*
 }
 
 
-public function introducir_compra($producto) {  //seleccionarProductos
+  
+  public function introducir_compra($producto) {  //seleccionarProductos
     $respuesta = $this->bd->enviarConsulta("SELECT * FROM productos ORDER BY codigo");
     return $respuesta;
 }   
@@ -31,9 +32,18 @@ public function actualizarProducto($id, $codigo, $producto, $descripcion, $preci
 }
 
 }
-$producto = new Producto($bd, $codigo, $producto, $descripcion, $precio);
-
 ?>
+
+
+
+
+
+
+
+
+
+
+
 
 <!--
 

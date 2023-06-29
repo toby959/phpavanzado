@@ -1,55 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="estilos.css">
 </head>
- 
+
 <body>
- 
-<div class="container">
-	<header>
-		<h1>Programación en PHP y MySQL - Nivel Avanzado</h1>
-	
 
-	<nav>
-		<?php include("botonera.php"); ?>
-	</nav>
-	</header>
- 
-	             <!-- UNIDAD VII  -->
-     
-<section id="pdo">
-		<h2>Compras</h2>
- 
-<!-- Formulario para ingresar los datos del producto  --> 
-<h2>Ingresar un nuevo producto</h2>
-<form method="POST" action="altas_prod.php">
-  <label for="codigo">Código:</label>
-  <input type="text" id="codigo" name="codigo"><br>
+  <div class="container">
+    <header>
+      <h1>Programación en PHP y MySQL - Nivel Avanzado</h1>
 
-  <label for="producto">Producto:</label>
-  <input type="text" id="producto" name="producto"><br>
 
-  <label for="descripcion">Descripción:</label>
-  <input type="text" id="descripcion" name="descripcion"><br>
+      <nav>
+        <?php include("botonera.php"); ?>
+      </nav>
+    </header>
 
-  <label for="precio">Precio:</label>
-  <input type="text" id="precio" name="precio"><br>
+                                   <!-- UNIDAD VII  -->
 
-  <button type="submit">Cargar Producto </button>
+    <section id="pdo">
+      <h2>Compras</h2>
 
- <?php
- if(isset($_GET['ok_prod'])) {
-  echo "<h4>Producto cargado!</h4>";
-} 
- ?>
+                   <!-- Formulario para ingresar los datos del producto  -->
+      <h2>Ingresar un nuevo producto</h2>
+      <form method="POST" action="altas_prod.php">
+        <label class="etiqueta" for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo"><br><br>
 
-</form>
+        <label class="etiqueta" for="producto">Producto:</label>
+        <input type="text" id="producto" name="producto"><br><br>
 
- <!--Tabla para mostrar los productos ingresados--> 
-<h2>Productos ingresados</h2>
+        <label class="etiqueta" for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion"><br><br>
+
+        <label class="etiqueta" for="precio">Precio:</label>
+        <input type="text" id="precio" name="precio"><br><br>
+
+        <button class="btn_3 unida_5 u_7" type="submit">Cargar Producto </button>
+
+        <?php
+        if (isset($_GET['ok_prod'])) {
+          echo "<h4>Producto cargado!</h4>"; // metodo _GET
+        }
+        ?>
+
+
+
+                    <!--Tabla para mostrar los productos ingresados-->
+        <h2>Productos ingresados</h2>
+
+                                      <!-- NEW -->
+        <?php
+        include("basededatos.php");
+        include("producto.php");
+        include("constantes.php");
+        include("carrito.php");
+
+
+        $base = new Basededatos(SERVIDOR, USUARIO, PASS, BASE);
+
+        $producto = new Producto($base);  //
+
+        $mostrar_productos = $producto->listar_productos($codigo, $producto, $descripcion, $precio);
+
+        ?>
+
+
+
+        <table>
+
+          <tr>
+            <th>Código</th>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+
+                                       <!-- DINAMICA -->
+          <?php
+          for ($i = 0; $i < count($mostrar_productos); $i++) {
+          ?> <!--nuetro array-->
+            <tr>
+
+              <td><?php echo $mostrar_productos[$i]['codigo']; ?></td>
+              <td><?php echo $mostrar_productos[$i]['producto']; ?></td>
+              <td><?php echo $mostrar_productos[$i]['descripcion']; ?></td>
+              <td><?php echo $mostrar_productos[$i]['precio']; ?></td>
+              <td><a href="listar_compra.php?id=<?php echo $mostrar_productos[$i]['codigo']; ?>">Comprar</td>
+              <td><a href="eliminar_compra.php?id= <?php echo $mostrar_productos[$i]['codigo']; ?>">Eliminar</td>
+
+            </tr>
+          <?php } ?>
+        </table>
+      </form> 
+     </section>
+    <aside>
+
+    </aside>
+    <footer>
+      <a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
+    </footer>
+
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+
+
+
+<h1>Lista de Productos</h1>
 <table>
   <thead>
     <tr>
@@ -57,30 +125,64 @@
       <th>Producto</th>
       <th>Descripción</th>
       <th>Precio</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Producto 1</td>
-      <td>Descripción del producto 1</td>
-      <td>$10.00</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Producto 2</td>
-      <td>Descripción del producto 2</td>
-      <td>$20.00</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Producto 3</td>
-      <td>Descripción del producto 3</td>
-      <td>$30.00</td>
-    </tr>
+    <?php //foreach ($productos as $indice => $producto) { 
+    ?>
+      <tr>
+        <td><//?php echo $producto['codigo']; ?></td>
+        <td><//?php echo $producto['producto']; ?></td>
+        <td><//?php echo $producto['descripcion']; ?></td>
+        <td><//?php echo $producto['precio']; ?></td>
+        <td>
+          <form method="post">
+            <input type="hidden" name="indice" value="<//?php echo $indice; ?>">
+            <button type="submit" name="comprar">Comprar</button>
+          </form>
+        </td>
+      </tr>
+    <?php //} 
+    ?>
   </tbody>
 </table>
-              <!--  PHP   -->
+
+<h1>Carrito de Compras</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Producto</th>
+      <th>Descripción</th>
+      <th>Precio</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php //foreach ($compras as $indice => $compra) { 
+    ?>
+      <tr>
+        <td><//?php echo $compra['codigo']; ?></td>
+        <td><//?php echo $compra['producto']; ?></td>
+        <td><//?php echo $compra['descripcion']; ?></td>
+        <td><//?php echo $compra['precio']; ?></td>
+        <td>
+          <form method="post">
+            <input type="hidden" name="indice" value="<//?php echo $indice; ?>">
+            <button type="submit" name="eliminar">Eliminar</button>
+          </form>
+        </td>
+      </tr>
+    <?php //} 
+    ?>
+  </tbody>
+</table>   -->
+
+
+
+
+<!--  PHP   -->
 <?php
 // Incluir los archivos que contienen las clases
 //include('producto.php');
@@ -105,91 +207,10 @@
 // Eliminar una compra del carrito
 //$carrito->eliminar_compra($id_compra);
 ?>
-			 
-	</section>
-	<aside>
-    
-  </aside>
-	<footer>
-		<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
-	</footer>
- 
-</div>
-</body>
-</html>
 
 
 
-
-
-
-
-
-
-
-<!--
-
-<h1>Lista de Productos</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Código</th>
-      <th>Producto</th>
-      <th>Descripción</th>
-      <th>Precio</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php //foreach ($productos as $indice => $producto) { ?>
-      <tr>
-        <td><//?php echo $producto['codigo']; ?></td>
-        <td><//?php echo $producto['producto']; ?></td>
-        <td><//?php echo $producto['descripcion']; ?></td>
-        <td><//?php echo $producto['precio']; ?></td>
-        <td>
-          <form method="post">
-            <input type="hidden" name="indice" value="<//?php echo $indice; ?>">
-            <button type="submit" name="comprar">Comprar</button>
-          </form>
-        </td>
-      </tr>
-    <?php //} ?>
-  </tbody>
-</table>
-
-<h1>Carrito de Compras</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Código</th>
-      <th>Producto</th>
-      <th>Descripción</th>
-      <th>Precio</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php //foreach ($compras as $indice => $compra) { ?>
-      <tr>
-        <td><//?php echo $compra['codigo']; ?></td>
-        <td><//?php echo $compra['producto']; ?></td>
-        <td><//?php echo $compra['descripcion']; ?></td>
-        <td><//?php echo $compra['precio']; ?></td>
-        <td>
-          <form method="post">
-            <input type="hidden" name="indice" value="<//?php echo $indice; ?>">
-            <button type="submit" name="eliminar">Eliminar</button>
-          </form>
-        </td>
-      </tr>
-    <?php //} ?>
-  </tbody>
-</table>  
-
-
-
-                        
+<!--                                       
 <?php
 //require_once('conexion.php');
 //require_once('producto.php');
@@ -213,8 +234,4 @@
 //$productos = $producto->listar_productos();
 //$compras = $carrito->listar_compra();
 ?>
-	
--->
-
-
-  <!--                     -->
+//

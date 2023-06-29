@@ -45,7 +45,7 @@
 			?>
 			<h3 class="unidad4">Marca de Agua</h3>
 			<div id="m_a">
-			<img src="marca_agua.php" />
+			<img class="agua" src="marca_agua.php" />
             </div> 
 			<h3 class="unidad4">Thumbnail</h3>
 			<?php
@@ -60,7 +60,7 @@
 			
 			include("thumbnail2.php");?>
 			<div id="m_a">
-			<img src="imagenes/unidad4.jpg">
+			<img class="img_u4" src="imagenes/unidad4.jpg">
 			</div> 
             <div id="m_a">
 			<img src="imagenes/unidad4_thumb.jpg">
@@ -74,7 +74,7 @@
 			 <img src="imagen_dinamica2.php" />
 			 </div> 
              <div id="m_a">
-			 <img src="imagen_texto.php" />
+			 <img class="img_texto" src="imagen_texto.php" />
 			 </div>  
 		</section>
 		                 <!-- END --> 

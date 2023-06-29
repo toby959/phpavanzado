@@ -41,7 +41,7 @@
 				<textarea id="consulta" name="consulta" required></textarea><br><br>
 
 
-				<h6>CAPTCHA</h6>
+				<h6 class="color_tit" >CAPTCHA</h6>
 				                <!--  ESTRUCTURA RANDOM -->
 
 
@@ -61,7 +61,7 @@
 				<img class="u_5" src="captcha.php">
 
 				<div class="uni_5">
-					<input type="text" name="codigo" placeholder="Captcha">
+					<input class="unidad_5_" type="text" name="codigo" placeholder="Captcha">
 				</div>
 				<div class="unida_5">
 					<input class="btn_3 unida_5" type="submit" name="Enviar">

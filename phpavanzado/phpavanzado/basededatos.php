@@ -15,10 +15,10 @@ class Basededatos {
 	}
 
 	private function _connect($servidor, $usuario, $password, $base) {
-		$this->conexion = new mysqli($servidor, $usuario, $password, $base);
-		if(!$this->conexion->connect_error) {
-			$this->error = $this->conexion->connect_error;
-			return false;
+		$this->conexion = new mysqli ($servidor, $usuario, $password, $base);
+		if(!$this->conexion->connect_error) {                  //
+			$this->error = $this->conexion->connect_error;    //  no sale.... 
+			return false;                                     //   
 		}
 	}
 
