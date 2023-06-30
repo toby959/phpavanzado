@@ -2,19 +2,19 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require("PHPMailer/class.phpmailer.php");
-require("PHPMailer/class.smtp.php");
+require("librerias/PHPMailer.php");
+require("librerias/SMTP.php");
 
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
 $telefono = $_POST["telefono"];
 $asunto = $_POST["asunto"];
 $mensaje = $_POST["mensaje"];
-$destinatrario = "diplomaturaprogramacionweb@gmail.com";
+$destinatario = "christiangaraw8@gmail.com";
 
 // datos de la cuenta de correo utilizada para enviar vía SMTP
 $smtpHost = "";  // Dominio alternativo brindado en el email de alta 
-$smtpUsuario = "contactovirtual.com.ar"; // Mi cuenta de correo
+$smtpUsuario = "christiangaraw8@gmail.com";//"contactovirtual.com.ar"; // Mi cuenta de correo
 $smtpClave = ""; //Mi contraseña
 
 $mail = new PHPMailer();
@@ -28,6 +28,11 @@ $mail->CharSet = "utf-8";
 $mail->Host = $smtpHost;
 $mail->Username = $smtpUsuario;
 $mail->Password = $smtpClave;
+
+
+$mail->From = $email; // Email desde donde envío el correo
+$mail->FromName = $nombre; 
+$mail->AddAddress($destinatario); //Esta es la dirección donde enviamos los datos del formulario  
 
 
 // Titulo del email
@@ -56,4 +61,6 @@ $mail->Body = "
 </html>
 
 ";
+header("Location: unidad8.php?ok");
+
 ?>

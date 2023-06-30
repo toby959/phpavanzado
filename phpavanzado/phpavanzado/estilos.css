@@ -65,37 +65,61 @@ nav ul li a {
                         /*  UNIDAD I */
 
 .agenda {
-  width: 280px;
-  height: 140px;
-  float: left;
+  width: 50%;
+  height: 150px;
   margin: 10px;
   padding: 10px;
-  box-sizing: border-box;
-  background-color: #afea24;
+  background-color: #dce9be;
   font-size: 15px;
   font-weight: bold;
   text-align: center; 
 }
-#btn_agenda2 {
-  width: 150px;
-  height: 40px;
-  background: #f1281a;
-  -moz-border-radius:25%;-webkit-border-radius:25%;-o-border-radius:25%;border-radius:25%; 
-  margin-left: auto;
-  margin-right: auto; 
+.unidad1 {
+  background-color: transparent;
+  display:contents;
+  
+}
+.btn_unidad1 {
+  width: 55px;
+  margin-right: -300px;
+  text-align: center; 
+}  
+.u-1 {
+  width: 120px;
+}
+.u-2 {
+  width: 90px;
+}
+  
+.btn_9 {
+  background-color: #e00202;
+  color: #000;
+  border: 2px solid #4CAF50;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
+  margin-left: 170px;
+}
+.btn_9:hover {
+  background-color: #750b79;
+  color: #cccccc;
 }
 
-#btn_agenda2:hover {
-  background-color: #fff;     
-} 
 
-.btn {
-  color: #0f0b0b;
-  background-color: cadetblue;
-  -moz-border-radius:20%;-webkit-border-radius:20%;-o-border-radius:20%;border-radius:20%; 
-  margin-top: -50px;
-}
                         /* UNIDAD 2 */   
+.unidad_2 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.trabajo2 {
+  background-color: #a4eeea;
+}
+
+.unidad2 {
+  background-color: rgba(145, 228, 67, 0.2);
+  box-shadow: #ee4 10px;
+  width: 150px;
+  text-align: center;
+}
+
 h6 {
   color: #000;
   background-color: #afea24;
@@ -103,6 +127,8 @@ h6 {
   margin: 10px;
   -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px; 
 }
+
+
 
                         /* UNIDAD 3 */
                           /* UL */
@@ -141,7 +167,7 @@ h6 {
   color: #cccccc;
 }
 .casillero {
-  background-color: #dad7d7;
+  background-color: #cbe9f7;
 }
 .casillero:hover {
   background-color: #ffffff;
@@ -224,7 +250,7 @@ h6 {
   text-align: center;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 15px;
+  -moz-border-radius:15px;-webkit-border-radius:15px;-o-border-radius:15px;border-radius:15px;
   padding: 10px;
   box-shadow: 5px 15px 15px 5px #610404 inset;
   text-shadow: 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000, 0 0 3px #FF0000;
@@ -240,12 +266,14 @@ h6 {
 .u_5 {
   display: inline-block;
   padding: 5px;
-  border-radius: 10px;
+  -moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;
   width: 80px;
+  background-color: #b7ecc9;
 }
 
 .unidad_5_ {
    text-align: center;
+   background-color: #d7fad8;
 }
 
 .uni_5 {
@@ -316,6 +344,74 @@ h6 {
 
 }
 
+                            /*   UNIDAD VIII   */
+                            /* Ejercicio N° 1 */ 
+.ejerccicio1 {
+  background-color:rgb(8, 128, 72);opacity:0.7;
+  color: #1a0909; 
+  width: 48%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ejerccicio_1 {
+  background-color:rgb(235, 183, 14);opacity:0.7;
+  color: #1a0909; 
+  width: 46%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+                           /* Ejercicio N° 3 */ 
+.ejercicio3 {
+  width: 58px;
+  height: 25px;
+  color: #000;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  -moz-border-radius:20px;-webkit-border-radius:20px;-o-border-radius:20px;border-radius:20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:rgb(150, 57, 4); left:120px; top:0px;}
+  50%  {background-color:rgb(27, 176, 245); left:120px; top:120px;}
+  75%  {background-color:green; left:0px; top:120px;}
+  100% {background-color:rgb(35, 240, 46); left:0px; top:0px;}
+}
+
+
+.pdf {
+  width: 10%;
+  margin: 64px;
+  margin-top: 10px;
+}
+.unidad8 {
+  font-size: 6px;
+  color: #f534cb;
+}
+                
+                           /* Ejercicio N° 4 */
+
+.ejercicio4 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px 4px #888888;
+  text-align: center;
+}
+
+.ejercicio_4 {
+  
+  
+}
 
 footer {
   position: fixed;

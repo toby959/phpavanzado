@@ -18,14 +18,14 @@
 	</nav>
 	</header>
 	<section id="clases">
-		<h2>Agenda de clases</h2>
+		<h2>Agendar Clases</h2>
                       <!-- UNIDAD I -->
 
 <form action="insertar_clases.php" method="POST">
- <input type="number" name="clase" placeholder="Numero de Clase" required>
-  <input type="text" name="unidad" placeholder="Unidad" required>
-   <input type="date" name="fecha" placeholder="Fecha" required> 
-    <input type="submit" value="Enviar"> 
+ <input class="u-1" type="number" name="clase" placeholder="Numero de Clase" required>
+  <input class="u-2" type="text" name="unidad" placeholder="Unidad" required>
+   <input type="date" name="fecha" placeholder="Fecha" required><br><br> 
+    <input class="btn_3" type="submit" value="Enviar"> 
 </form>			
 
 <?php
@@ -47,9 +47,9 @@ if(isset($_GET['ok'])) {
 	   <p>Numero de Clase: <?php echo $listar_clas['id_clase']; ?></p>
 	    <p>Unidad: <?php echo $listar_clas['unidad']; ?></p>
 		 <p>Fecha: <?php echo $listar_clas['fecha']; ?></p>
-		  <nav id="btn_agenda2">
-            <ul class="uni1">
-			  <li class="uni2"><a class="btn" href="eliminar.php?clases=<?php echo $listar_clas['id_clase'];?>">Eliminar</a></li>	
+		  <nav class="unidad1" >
+            <ul class="unidad1" >
+			  <li class="unidad1" ><a class="btn_9 btn_unidad1" href="eliminar.php?clases=<?php echo $listar_clas['id_clase'];?>">Eliminar</a></li>	
 			</ul>
     	  </nav> 
      </div>	

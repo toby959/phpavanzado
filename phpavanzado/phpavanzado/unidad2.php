@@ -23,16 +23,16 @@
 
 		<section class="fecha">
 			<h2>Eventos</h2>
-			<h3>Función Fechas</h3>
+			<h3 class="unidad_2" >Función Fechas</h3>
 			<form action="calculo_fecha.php#fecha" method="POST">
-				<input type="number" name="day" min="1" max="31" placeholder="Día" required>
-				<input type="number" name="month" min="1" max="12" placeholder="Mes" required>
-				<input type="number" name="year" min="<?php echo date('Y'); ?>" max="2099" placeholder="Año" required>
-				<input type="submit" name="calcular_fecha" value="Calcular">
+				<input class="trabajo2" type="number" name="day" min="1" max="31" placeholder="Día" required>
+				<input class="trabajo2" type="number" name="month" min="1" max="12" placeholder="Mes" required>
+				<input class="trabajo2" type="number" name="year" min="<?php echo date('Y'); ?>" max="2099" placeholder="Año" required>
+				<input class="btn_3" type="submit" name="calcular_fecha" value="Calcular">
 			</form>  <!--La letra 'Y' - Representa un año (en cuatro dígitos) dentro de la función "date". -->
 
 			<div id="fechas">
-				<h3>Calcular Fechas</h3>
+				<h3 class="unidad2" >Calcular Fechas</h3>
 
 				<?php
 				if (isset($_GET['dias_faltantes'])) {
