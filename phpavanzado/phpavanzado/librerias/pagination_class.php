@@ -1,4 +1,4 @@
-<?
+<?php 
 /*
 Developed by Reneesh T.K
 reneeshtk@gmail.com
@@ -6,12 +6,12 @@ You can use it with out any worries...It is free for you..It will display the ou
 First | Previous | 3 | 4 | 5 | 6 | 7| 8 | 9 | 10 | Next | Last
 Page : 7  Of  10 . Total Records Found: 20
 */
-class Pagination_class{
-	var $result;
-	var $anchors;
-	var $total;
-	function __construct($qry, $base, $starting,$recpage)
-	{
+class Pagination_class {
+var $result;
+var $anchors;
+var $total;
+
+function __construct($qry, $base, $starting,$recpage) {
 		$rst		=	mysqli_query($base, $qry) or die("Error en la conexion");
 		$numrows	=	mysqli_num_rows($rst);
 		$qry		 .=	" limit $starting, $recpage";
@@ -28,48 +28,43 @@ class Pagination_class{
 			$last = ((intval($numrows/$recpage))-1)*$recpage;
 		}
 		$previous = $starting-$recpage;
-		$anc = "<ul id='pagination-flickr'>";
 		if($previous < 0){
-			$anc .= "<li class='previous-off'>First</li>";
-			$anc .= "<li class='previous-off'>Previous</li>";
+			$anc = "Primera | Anterior | ";
 		}else{
-			$anc .= "<li class='next'><a href='javascript:pagination(0);'>First </a></li>";
-			$anc .= "<li class='next'><a href='javascript:pagination($previous);'>Previous </a></li>";
+			$anc .= "<a href='javascript:pagination(0);'>Primera | </a>";
+			$anc .= "<a href='javascript:pagination($previous);'>Anterior | </a>";
 		}
 		
 		################If you dont want the numbers just comment this block###############	
 		$norepeat = 4;//no of pages showing in the left and right side of the current page in the anchors 
 		$j = 1;
-		$anch = "";
 		for($i=$page_showing; $i>1; $i--){
 			$fpreviousPage = $i-1;
 			$page = ceil($fpreviousPage*$recpage)-$recpage;
-			$anch = "<li><a href='javascript:pagination($page);'>$fpreviousPage </a></li>".$anch;
+			$anch = "<a href='javascript:pagination($page);'>$fpreviousPage | </a>".$anch;
 			if($j == $norepeat) break;
 			$j++;
 		}
 		$anc .= $anch;
-		$anc .= "<li class='active'>".$page_showing."</li>";
+		$anc .= $page_showing ."| ";
 		$j = 1;
 		for($i=$page_showing; $i<$total_page; $i++){
 			$fnextPage = $i+1;
 			$page = ceil($fnextPage*$recpage)-$recpage;
-			$anc .= "<li><a href='javascript:pagination($page);'>$fnextPage</a></li>";
+			$anc .= "<a href='javascript:pagination($page);'>$fnextPage | </a>";
 			if($j==$norepeat) break;
 			$j++;
 		}
 		############################################################
 		if($next >= $numrows){
-			$anc .= "<li class='previous-off'>Next</li>";
-			$anc .= "<li class='previous-off'>Last</li>";
+			$anc .= "Siguiente | Ultima ";
 		}else{
-			$anc .= "<li class='next'><a href='javascript:pagination($next);'>Next </a></li>";
-			$anc .= "<li class='next'><a href='javascript:pagination($last);'>Last</a></li>";
+			$anc .= "<a href='javascript:pagination($next);'>Siguiente | </a>";
+			$anc .= "<a href='javascript:pagination($last);'>Ultima</a>";
 		}
-			$anc .= "</ul>";
 		$this->anchors = $anc;
 		
-		$this->total = "Page : $page_showing <i> Of  </i> $total_page . Total Records Found: $numrows";
+		$this->total = "<svaluestrong>Pagina : $page_showing <i> De  </i> $total_page . Total Registros Encontrados: $numrows</svaluestrong>";
 	}
 }
 ?>

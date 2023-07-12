@@ -28,7 +28,7 @@
 				<input class="trabajo2" type="number" name="day" min="1" max="31" placeholder="Día" required>
 				<input class="trabajo2" type="number" name="month" min="1" max="12" placeholder="Mes" required>
 				<input class="trabajo2" type="number" name="year" min="<?php echo date('Y'); ?>" max="2099" placeholder="Año" required>
-				<input class="btn_3" type="submit" name="calcular_fecha" value="Calcular">
+				<input class="btn_3 unidad-2" type="submit" name="calcular_fecha" value="Calcular">
 			</form>  <!--La letra 'Y' - Representa un año (en cuatro dígitos) dentro de la función "date". -->
 
 			<div id="fechas">

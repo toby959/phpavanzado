@@ -29,7 +29,7 @@
 				<input class="casillero" type="email" id="email" name="email" required><br><br>
 				<label class="etiqueta"  for="comments">Comentario:</label>
 				<textarea class="casillero" id="comments" name="comments" rows="4" cols="30" required></textarea><br><br>
-				<input class="btn_3" type="submit" name="enviar" value="Enviar">
+				<input class="btn_3 unidad3" type="submit" name="enviar" value="Enviar">
 			</form>
  
                               <!-- PHP -->
